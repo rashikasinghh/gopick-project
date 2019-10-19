@@ -1,22 +1,562 @@
-.App {
+body, html {
+  background-color: #F6F7F9;
+}
+
+.filter_blur {
+  filter: blur(1.5px);
+}
+
+/* NavBar */
+
+.nav_blur {
+	height: 64px;
+	width: 1440px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.nav {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+
+}
+
+ul {
+  padding: 0px;
+  margin:0px;
+}
+
+ul li{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo {
+  padding-left: 123px;
+  height: 36px;
+  width: 131px;
+}
+
+.search {
+  height: 40px;
+  width: 299px;
+  border-radius: 22.5px;
+  background-color: #EBEBEB;
+  vertical-align: middle;
+  margin: 10px 10px 10px 30px;
+}
+  
+.searchImg {
+  height: 15px;
+  width: 15px;
+  padding: 13px 14px 12px 19px;
+  vertical-align: middle;
+}
+  
+.reviews{
+  height: 19px;
+  width: 190px;
+  color: #EBEBEB;
+  font-family: Avenir;
+  font-size: 14px;
+  line-height: 19px;
+  background: #EBEBEB;
+  border: none;
+}
+
+.home{
+  height: 21px;
+  width: 21px;
+  vertical-align: text-bottom;
+}
+
+.gift{
+  padding-left: 45px;
+  vertical-align: middle;
+}
+
+.bell{
+  padding-left: 45px;
+  padding-top: 7px;
+}
+
+.icon{
+  height: 33px;
+  width: 33px;
+  padding-left:65px;
+  padding-top: 5px;
+}
+
+.rectangle{
+  height: 37px;
+  width: 128px;
+  border-radius: 18.5px;
+  background: linear-gradient(90deg, #FF0844 0%, #FFB199 100%);
+  color: #FFFFFF;
+  font-family: Avenir;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  margin-left: 58px;
+}
+
+/* image */
+
+.change-profile-photo {
+  position: absolute;
+  z-index: 9999999;
+  top:31%;
+  left:2%;
+	height: 54px;
+	width: 200px;
+	color: #FFFFFF;
+	font-family: "Avenir Next";
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.32px;
+	line-height: 27px;
+	text-align: center;
+}
+
+.change-header-photo {
+  position: absolute;
+  top: 20%;
+  left:44%;
+  z-index: 999999;
+	height: 27px;
+	width: 213px;
+	color: #FFFFFF;
+	font-family: "Avenir Next";
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.32px;
+	line-height: 27px;
+	text-align: center;
+}
+
+/* SideBAR */
+
+.sidebar_card {	
+  position: absolute;
+  padding-left: 121px;
+  top: 17%;
+  height: 647px;	
+  width: 301px;
+}
+
+.sidebar_profile_img {	
+  height: 200px;	
+  width: 200px; 
+  position: relative;
+  z-index: 99999;
+  margin: 35px;
+}
+
+.rectangle-24 {
+  position: relative;
+  top: -18%;
+	height: 454px;
+	width: 256px;
+  border-radius: 5px;
+  padding-top: 30%;
+  padding-left: 21px;
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(209,209,209,0.5);
+}
+.profile_name_edit {
+  height: 40px;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  border:none;
+  padding-left: 9px;
+}
+
+.profile_name {	
+  height: 29px;	
+  width: 228px;	
+  color: #333333;	
+  font-family: "Avenir Next";	
+  font-size: 21px;	
+  font-weight: bold;	
+  letter-spacing: 0.39px;	
+  line-height: 29px;	
+}
+
+.profile_deg {
+  height: 20px;
+  width: 95px;
+  color: #787878;
+  font-family: "Avenir Next";
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.37px;
+  line-height: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.edit-button-profile {
+	color: #6A6A6A;
+	font-family: "Avenir Next";
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.25px;
+	line-height: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.edit_button {
+  box-sizing: border-box;	
+  height: 36px;	
+  width: 113px;	
+  border: 1px solid #BCBCBC;	
+  border-radius: 17.5px;	
+  background-color: #FFFFFF;
+  margin-top:18px;
+}
+
+.update_button {
+  border-radius: 17.5px;
+	height: 36px;
+	width: 101px;
+	color: #E23744;
+	font-family: "Avenir Next";
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.25px;
+	line-height: 20px;
+}
+
+.update_button:focus {
+  outline: none;
+}
+
+.description {
+  height: 66px;	
+  width: 280px;	
+  color: #333333;	
+  font-family: Avenir;	
+  font-size: 15px;	
+  font-weight: 300;	
+  letter-spacing: 0.2px;	
+  line-height: 22px;
+  margin-top: 30px;
+}
+.description_input {
+  padding: 8px;
+  height: 98px;
+  width: 224px;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.input_edit_box {
+  height: 30px;
+  width: 232px;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.input_description {
+  padding-left: 10px;
+	color: #6A6A6A;
+	font-family: Avenir;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0.2px;
+	line-height: 22px;
+}
+
+.link-edit {
+	height: 18px;
+	width: 82px;
+	color: #4A90E2;
+	font-family: "Avenir Next";
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 0.32px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.link {
+  height: 20px;	
+  width: 112px;	
+  color: #4A90E2;	
+  font-family: "Avenir Next";	
+  font-size: 15px;	
+  line-height: 20px;	
+  text-align: center;
+  padding-left: 4px;
+}
+
+.stat {
+  width: 35px;	
+  color: #BEBEBE;	
+  font-family: "Avenir Next";	
+  font-size: 12px;	
+  font-weight: 600;	
+  line-height: 16px;	
+  text-align: center;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.line {
+	box-sizing: border-box;
+	width: 201px;
+  border: 1px solid #E7E7E7;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.statistic {
+  padding: 0px 31px 0px 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  text-align: -webkit-center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #09d3ac;
+.number {
+	height: 25px;
+	width: 33px;
+	color: #333333;
+	font-family: "Avenir Next";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 25px;
+  text-align: center;
+  margin: 0px;
+}
+
+.views {
+	height: 19px;
+	width: 38px;
+	color: #9B9B9B;
+	font-family: "Avenir Next";
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: center;
+}
+
+.statistic_line {
+  box-sizing: border-box;
+  width: 256px;
+  border: 1px solid #E7E7E7;
+}
+
+/* Main Card */
+
+.main {
+  position: absolute;
+  top:360px;
+  left:414px;
+}
+
+.srivatsa-s-reviews {
+	height: 25px;
+	width: 153px;
+	color: #333333;
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 25px;
+  text-align: center;
+  display: inline;
+}
+
+.save_drafts {
+  float: right;
+	height: 19px;
+	width: 82px;
+	color: #E23744;
+	font-family: Avenir;
+	font-size: 14px;
+	font-weight: 500;
+  line-height: 19px;
+  display: inline;
+}
+
+.main_card{
+  margin-top: 26px;
+  height: 702px;
+  width: 605px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(209,209,209,0.5);
+}
+
+.main_heading{
+  height: 29px;
+  width: 461px;
+  color: #000000;
+  font-family: "Avenir Next";
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0.22px;
+  line-height: 26px;
+  display: inline-block;
+  padding-left: 5px;
+  margin: 0px;
+}
+
+.content {
+  padding: 15px 14px 0 24px;
+}
+
+.the_verge{
+  height: 20px;
+  width: 144px;
+  color: #333333;
+  font-family: Avenir;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  margin:0px;
+  margin-top:20px;
+}
+
+.main_reviews {
+  height: 18px;
+  width: 71px;
+  color: #9B9B9B;
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  margin: 0px;
+}
+
+.oneplus{
+  height: 96px;
+  width: 545px;
+  font-family: Avenir;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.oneplus a {
+  color: #6075F9;
+}
+
+
+/* REVIEW */
+.review_comp {
+  position: absolute;
+  top: 360px;
+  right: 19%;
+}
+
+.review_card {
+  position: absolute;
+  padding-top: 10px;
+}
+
+.top-reviewers {
+	height: 25px;
+	width: 124px;
+	color: #333333;
+	font-family: Avenir;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 25px;
+	text-align: center;
+}
+
+.review_border {
+	height: 3px;
+	width: 30px;
+	border-radius: 10px;
+  background-color: #0A4B5B;
+  margin-top:3px;
+}
+
+.reviewers {
+  padding:10px;
+	height: 329px;
+	width: 255px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(209,209,209,0.5);
+}
+
+.copyright-card {
+  margin-top: 10px;
+	height: 89px;
+	width: 275px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(209,209,209,0.5);
+}
+
+.copyright-tab {	
+  padding: 15px 21px 14px 26.58px;
+  height: 60px;
+  width: 226.95px;
+  color: #9B9B9B;
+  font-family: Avenir;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.19px;
+  line-height: 20px;
+}
+
+.review_flex {
+  display: inline-block;
+  width: 248px;
+  padding-top: 22px;
+}
+
+.follower_name {
+	color: #333333;
+	font-family: Avenir;
+	font-size: 15px;
+	font-weight: 900;
+	letter-spacing: 0.03px;
+	line-height: 20px;
+  text-align: center;
+  margin:0px;
+}
+
+.follow_number {
+	height: 18px;
+	width: 72px;
+	color: #9B9B9B;
+	font-family: Avenir;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0.27px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.follow_button {
+	color: #E23744;
+	font-family: Avenir;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.03px;
+	line-height: 19px;
+  text-align: center;
+  display: inline;
+  float: right;
+  box-sizing: border-box;
+	height: 30px;
+	width: 64px;
+	border: 1px solid #D2D2D2;
+	border-radius: 15px;
+	background-color: #FFFFFF;
 }
