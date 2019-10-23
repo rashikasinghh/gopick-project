@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import profileImage from '../../Assets/matthew-kane-365718-profile.png';
 import linkImage from '../../Assets/chain-links.png';
-import {Link} from 'react-router-dom';
 import profileUpdate from '../../Assets/photo_update.png'
 
 class SideBar extends Component {
@@ -9,9 +8,15 @@ class SideBar extends Component {
         update: false
     }
 
-    componentDidMount() {
-        if (this.props.data === true)
-        this.setState({update:true})
+    onClickHandler = (type) => {
+        if (type === 'update') this.props.update(false)
+        else this.props.update(true)
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        if (props.data) state.update = true
+        else state.update = false
+        return state
     }
 
     render(){
@@ -27,16 +32,16 @@ class SideBar extends Component {
                     </div>
                 }
                 <div className="rectangle-24">
-                    {this.state.update ? <input type="text" className="profile_name profile_name_edit" value='Srivatsa Mudumby'/> 
+                    {this.state.update ? <input type="text" className="profile_name profile_name_edit" defaultValue='Srivatsa Mudumby'/> 
                     : <div className="profile_name">Srivatsa Mudumby</div>}
                     <span className={`${this.state.update ? 'link-edit':'profile_deg'}`}>@technophie</span>
                     {this.state.update ? '' :
                     <div>
-                        <Link to="/update"><button className="edit_button edit-button-profile">Edit Profile</button></Link>
+                        <button className="edit_button edit-button-profile" onClick={() => this.onClickHandler('edit')}>Edit Profile</button>
                     </div>
                     }
                     {this.state.update ?
-                    <textarea type="text" className="description_input description" value="Early Adaptor. Visual Learner.
+                    <textarea type="text" className="description_input description" defaultValue="Early Adaptor. Visual Learner.
                         Entrepreneur. Design aficonado!
                         Favorite hash - #Viral"/>
                     : <p className="description">
@@ -58,26 +63,26 @@ class SideBar extends Component {
                     </div>
 
                     <div className="statistic">
-                        <div class="text">
+                        <div>
                             <p className="number">567</p>
                             <span className="views">Reviews</span>
                         </div>
-                        <div class="text">
+                        <div>
                             <p className="number">1.2M</p>
                             <span className="views">Views</span>
                         </div>
-                        <div class="text">
+                        <div>
                             <p className="number">1.2K</p>
                             <span className="views">Upvotes</span>
                         </div>
                         </div>
                         <div className="statistic_line"></div>
                         <div className="statistic" style={{padding: '0 67px 0 40px', marginTop:'10px'}}>
-                            <div class="text">
+                            <div>
                                 <p className="number">1.2M</p>
                                 <span className="views">Followers</span>
                             </div>
-                            <div class="text">
+                            <div>
                                 <p className="number">643</p>
                                 <span className="views">Following</span>
                             </div>
@@ -86,10 +91,10 @@ class SideBar extends Component {
                         }
                         {this.state.update ? 
                         <div>
-                        <input type="text" className="input_edit_box input_description" value="Hyderabad"/>
-                        <input type="text" className="input_edit_box input_description" value="Website"/>
+                        <input type="text" className="input_edit_box input_description" defaultValue="Hyderabad"/>
+                        <input type="text" className="input_edit_box input_description" defaultValue="Website"/>
                         <div style={{paddingLeft:'60px', marginTop:'13px'}}>
-                            <Link to="/"><button className="update_button">Update</button></Link>
+                            <button className="update_button" onClick={() => this.onClickHandler('update')}>Update</button>
                         </div>
                         </div>
                         :''

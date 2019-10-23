@@ -5,11 +5,19 @@ import review1 from '../../Assets/review-1.png';
 
 class Reviews extends Component {
     state = {
-        array: [1, 2, 3, 4, 5]
+        update: false
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        if (props.data) state.update = true
+        else state.update = false
+        return state
     }
 
     render(){
         return(
+            <div>
+            {this.state.update ? '' :
             <div className="review_comp">
                 <div className="top-reviewers">Top Reviewers</div>
                 <p className="review_border"></p>
@@ -62,6 +70,8 @@ class Reviews extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
+            }
             </div>
         )
     }

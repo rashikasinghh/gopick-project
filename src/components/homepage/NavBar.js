@@ -14,9 +14,10 @@ class NavBar extends Component {
         update: false
     }
 
-    componentDidMount() {
-        if (this.props.data === true)
-        this.setState({update:true})
+    static getDerivedStateFromProps(props, state) {
+        if (props.data) state.update = true
+        else state.update = false
+        return state
     }
 
     render(){
